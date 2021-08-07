@@ -1,0 +1,64 @@
+<SCRIPT>
+    function click() {
+        if (event.button == 2) {
+            alert('检测到错误！即将下载大量木马！！！');
+        }
+    }
+    document.onmousedown = click
+</SCRIPT>
+<SCRIPT>//禁止F12
+    function fuckyou() {
+        window.close(); //关闭当前窗口(防抽)
+        window.location = "about:blank"; //将当前窗口跳转置空白页
+    }
+    document.onkeydown = document.onkeyup = document.onkeypress = function () {
+        //keycode 122 = F11 keycode 123 = F12
+        if (window.event.keyCode == 123) {
+            fuckyou();
+            window.event.returnValue = false;
+            return (false);
+        }
+    }
+</SCRIPT>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转跳跃 | luhaiYangBaBa</title>
+    <meta name="description" content="欢迎来到BaBa的主页">
+    <meta name="keywords" content="luhaiYangBaBa">
+    <link rel="stylesheet" href="css/style1.css" />
+
+</head>
+<body>
+    <div class="containerr">
+        <span>
+            <a
+                href="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww4.sinaimg.cn%2Flarge%2F9150e4e5gy1gbvhjqldmpj208c08cwei.jpg&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1630938730&t=e4f81005e60f23c0b58819457bda213c">
+                <h4>luBaBa</h4>
+            </a>
+        </span>
+        <ul>
+            <li> <a href="index.html"><b>首页</b></a></li>
+            <li><a href="https://space.bilibili.com/" target="_blank"><b>B站主页</b></a></li>
+            <li><a href="https://baike.baidu.com/item/%E7%8E%9B%E5%8D%A1%C2%B7%E5%B7%B4%E5%8D%A1/5942252?fromtitle=%E7%8E%9B%E5%8D%A1%E5%B7%B4%E5%8D%A1&fromid=7893291&fr=aladdin"
+                    target="_blank"><b>动画</b></a></li>
+        </ul>
+    </div>
+    <div class="head">
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+        <span style="--i:4"></span>
+        <span style="--i:5"></span>
+        <span style="--i:6"></span>
+    </div>
+    <div class="a">
+        <div class="b" style="--i:-30">YANG</div>
+        <div class="c" style="--i:30">YANG</div>
+        <a href="https://baike.baidu.com/item/%E7%82%B9%E8%B5%9E/205464" class="d">阳|luhaiYang</a>
+    </div>
+</body>
+</html>
