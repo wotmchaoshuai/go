@@ -3,15 +3,15 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
 heml, body {
 	font-family: 微软雅黑;
 	line-height: 1.7em;
 	display: flex;
 	justify-content: center;
-	
-	
 }
-body{
+
+body {
 	background-image: linear-gradient(to right, #2e0b37, #492020 20%, #464625 80%, #5e3232);
 	-moz-user-select: none;
 	-webkit-user-select: none;
@@ -19,50 +19,96 @@ body{
 	-khtml-user-select: none;
 	user-select: none;
 }
+
 a {
 	text-decoration: none;
 }
+
 .containerr {
 	height: 30px;
 	width: 100%;
 	height: 75px;
 	overflow: hidden;
-	background-color:transparent;
+	background-color: transparent;
 }
+@media screen and (max-width: 360px) {
+	.containerr {
+		height: 30px;
+		width: 100%;
+		height: 45px;
+		overflow: hidden;
+		background-color: transparent;
+	}
+}
+
 .containerr span {
 	float: left;
-	font-size: 50px;
-	padding: 25px;
-	
+	padding:25px;
 }
+@media screen and (max-width: 360px) {
+	.containerr span {
+		float: left;
+		padding:10px;
+	}
+}
+
 .containerr span a {
+	font-size: 50px;
 	color: rgb(155, 81, 81);
 }
+@media screen and (max-width: 360px) {
+	.containerr span a {
+		font-size: 20px;
+		color: rgb(155, 81, 81);
+	}
+}
+
 .containerr ul {
 	float: right;
 	list-style: none;
 }
+
 .containerr ul li {
 	float: left;
 }
+
 .containerr ul li a {
 	display: block;
 	color: rgb(107, 86, 121);
 	padding: 25px;
 	font-size: 25px;
 }
+@media screen and (max-width: 360px) {
+	.containerr ul li a {
+		display: block;
+		color: rgb(107, 86, 121);
+		padding: 10px;
+		font-size: 12px;
+	}
+}
+
 /* .containerr ul li a:hover {
 	background: rgb(104, 173, 131);
 	color: rgba(255, 255, 255, 0.486);
 	box-shadow:inset 0 0 50px rgba(0, 94, 31, 0.5), inset 0 0 100px rgb(122, 19, 19);
 } */
+
 .head {
 	position: absolute;
 	top: 60px;
 	width: 520px;
 	height: 520px;
 }
-.head span{
+@media screen and (max-width: 360px) {
+	.head {
+		position: absolute;
+		top: 80px;
+		width: 360px;
+		height: 360px;
+	}
+}
+
+.head span {
 	background: url('/image/me.png');
 	background-position: center;
 	background-size: 450px;
@@ -82,7 +128,30 @@ a {
 	animation: head 5s infinite cubic-bezier(0.8, -0.5, 0.5, 1.6);
 	animation-delay: calc(var(--i)*.07s);
 }
-@keyframes head{
+@media screen and (max-width: 360px) {
+	.head span {
+		background: url('/image/me.png');
+		background-position: center;
+		background-size: 305px;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		border-radius: 50%;
+		/* 这里设置span的大小 */
+		top: calc(var(--i)*35px);
+		left: calc(var(--i)*35px);
+		right: calc(var(--i)*35px);
+		bottom: calc(var(--i)*35px);
+		/* 设置阴影 */
+		/* box-shadow: inset 0 0 50px rgba(0, 0, 0, .5), inset 0 0 100px #000; */
+		animation: head 5s infinite cubic-bezier(0.8, -0.5, 0.5, 1.6);
+		animation-delay: calc(var(--i)*.07s);
+	}
+}
+
+@keyframes head {
 	0% {
 		transform: rotateZ(0deg);
 	}
@@ -99,22 +168,44 @@ a {
 		transform: rotateZ(360deg);
 	}
 }
-.head span::after {
 
+.head span::after {
 	content: 'HAIYANG|LU';
 	/* 因为这种简写的方法必须要有字体样式，所以我们这里直接填空默认就行了 */
 	font: 900 60px '';
 	color: rgb(21, 220, 255);
 }
-.a{
-	position:absolute;
-	top: 600px;
-	width: 300px;
+@media screen and (max-width: 360px) {
+	.head span::after {
+		content: 'HAIYANG|LU';
+		/* 因为这种简写的方法必须要有字体样式，所以我们这里直接填空默认就行了 */
+		font: 900 43px '';
+		color: rgb(21, 220, 255);
+	}
+}
+
+.a {
+	position: absolute;
+	top: 570px;
+	width: 250px;
 	display: flex;
 	justify-content: center;
-	margin: 0px 30px;
+	margin-left: auto;
+	margin-right: auto;
 }
-.c,.b{
+@media screen and (max-width: 360px) {
+	.a {
+		position: absolute;
+		top: 440px;
+		width:360px;
+		display: flex;
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.c, .b {
 	font: 900 100px '';
 	line-height: 150px;
 	position: absolute;
@@ -123,25 +214,40 @@ a {
 	/* 使文字上下移动时有0.4s的过渡效果 */
 	transition: .4s;
 }
+@media screen and (max-width: 360px) {
+	.c, .b {
+		font: 900 50px '';
+		line-height: 150px;
+		position: absolute;
+		color: rgb(40, 20, 56);
+		top: 0;
+		/* 使文字上下移动时有0.4s的过渡效果 */
+		transition: .4s;
+	}
+}
 
-.c{
+.c {
 	/* 裁剪文字的上半部分，括号里的四个值分别是
 	top，right，bottom，left */
 	clip-path: inset(49% 0 0 0);
 }
-.b{
+
+.b {
 	/* 裁剪文字的下半部分 */
 	clip-path: inset(1% 0 50% 0);
 }
-.a:hover .b,.a:hover .c{
+
+.a:hover .b, .a:hover .c {
 	/* 让--i为30的向上移动30px，-30的向下移动30px
 	这样子就能空出60px留给中间的超链接 */
 	top: calc(var(--i)*1px);
 }
-.a:hover .d{
+
+.a:hover .d {
 	opacity: 1;
 }
-.d{
+
+.d {
 	text-align: center;
 	text-decoration: none;
 	color: cyan;
@@ -149,4 +255,15 @@ a {
 	line-height: 150px;
 	opacity: 0;
 	transition: .3s;
+}
+@media screen and (max-width: 360px) {
+	.d {
+		text-align: center;
+		text-decoration: none;
+		color: cyan;
+		font: 600 15px '';
+		line-height: 150px;
+		opacity: 0;
+		transition: .3s;
+	}
 }
