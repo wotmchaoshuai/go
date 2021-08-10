@@ -1,0 +1,128 @@
+* {
+    padding: none;
+    margin: none;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+}
+
+@media screen and (max-width: 360px) {
+    img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-image: url("wu.jpg");
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        background-image: url("wu.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+.a {
+    /* background-color: hotpink; */
+    position: relative;
+    width: 500px;
+    margin: 150px auto 100px;
+    text-align: center;
+}
+
+@media screen and (max-width: 360px) {
+    .a {
+        /* background-color: hotpink; */
+        position: relative;
+        width: 250px;
+        margin: 150px auto 100px;
+        text-align: center;
+    }
+}
+
+.c, .b, .e, .f {
+    position: absolute;
+    height: 500px;
+    font: 900 100px "";
+    top: 0;
+    right: 0px;
+    transition: .4s;
+}
+
+@media screen and (max-width: 360px) {
+    .c, .b, .e, .f {
+        position: absolute;
+        height: 250px;
+        font: 900 100px "";
+        top: 0;
+        right: 0px;
+        transition: .4s;
+    }
+}
+
+.c {
+    /* 裁剪文字的上半部分，括号里的四个值分别是
+    top，right，bottom，left */
+    clip-path: inset(50% 50% 0 0);
+}
+
+.b {
+    clip-path: inset(0 50% 50% 0);
+}
+
+.e {
+    clip-path: inset(0 0 50% 50%);
+}
+
+.f {
+    clip-path: inset(50% 0 0 50%);
+}
+
+.a:hover .b, .a:hover .c {
+    /* 让--i为30的向上移动30px，-30的向下移动30px
+    这样子就能空出60px留给中间的超链接 */
+    top: calc(var(--i)*1px);
+    right: 30px;
+}
+
+.a:hover .e, .a:hover .f {
+    top: calc(var(--i)*1px);
+    right: -30px;
+}
+
+.a:hover .d {
+    opacity: 1;
+}
+
+.d {
+    color: cyan;
+    font: 600 40px '';
+    line-height: 500px;
+    opacity: 0;
+    transition: .2s;
+}
+
+@media screen and (max-width: 360px) {
+    .d {
+        color: cyan;
+        font: 600 25px '';
+        line-height: 250px;
+        opacity: 0;
+        transition: .2s;
+    }
+}
