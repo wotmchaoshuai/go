@@ -26,16 +26,7 @@ li {
 
 body {
     background-image: url("wu.jpg");
-}
-
-@media screen and (max-width: 360px) {
-    body {
-        background-image: url("wu.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
     }
-}
 
 .a {
     /* background-color: hotpink; */
